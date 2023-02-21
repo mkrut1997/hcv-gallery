@@ -1,18 +1,35 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="gallery">
+    <div class="image" v-for="image in this.$store.state.images" v-bind:key="image.id">
+      <router-link v-bind:to="{name: 'image', params: {id: image.id}}">
+        <img  :src = "image.url" class="gallery-image">
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
+  name: 'HomeView'
 }
 </script>
+<style>
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .image{
+    width: 150px;
+    height: 150px;
+    margin-top: 7px;
+    margin-right: 7px;
+  }
+  .gallery-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+</style>
