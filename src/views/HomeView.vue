@@ -22,14 +22,14 @@ export default {
     justify-content: center;
   }
   .image{
-    width: 150px;
-    height: 150px;
+    width: 30vw;
+    height: 30vw;
     margin-top: 5px;
     margin-right: 5px;
   }
   .gallery-image{
-    width: 150px;
-    height: 150px;
+    width: 30vw;
+    height: 30vw;
     object-fit: cover;
   }
 </style>
