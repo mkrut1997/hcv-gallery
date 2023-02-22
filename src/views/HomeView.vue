@@ -24,8 +24,8 @@ export default {
   .image{
     width: 150px;
     height: 150px;
-    margin-top: 7px;
-    margin-right: 7px;
+    margin-top: 5px;
+    margin-right: 5px;
   }
   .gallery-image{
     width: 150px;
